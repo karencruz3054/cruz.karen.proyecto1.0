@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="static/style.css">
-	</head>
-	<body>
-		<div id="principal">
-			<header>
-				<div id="logo">
-					<h2 class="titulo">Alumnos</h2>
-					<p class="sub-titulo">inicio de sesion</p>
-				</div>
+    <head>
+        <title>Inicio de Sesión - Alumnos</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+    <body>
+        <div id="principal">
+            <header>
+                <div id="logo">
+                    <h2 class="titulo">Alumnos</h2>
+                    <p class="sub-titulo">inicio de sesion</p>
+                </div>
 
-				<nav class="menu">
-					<ul>
-						<li><a href="/">Inicio</a></li>
-						<li><a href="/Profesores">Profesores</a></li>
-						<li><a href="/Alumnos">Alumnos</a></li>
-						<li><a href="/Cursos">Cursos</a></li>
-					</ul>
-				</nav>
-			</header>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/Profesores">Profesores</a></li>
+                        <li><a href="/Alumnos">Alumnos</a></li>
+                        <li><a href="/Cursos">Cursos</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-			<section id="slide">
-				<img src="static/img/slide.jpg" width="900" height="250">
-			</section>
+            <section id="slide">
+                <img src="static/img/slide.jpg" width="900" height="250">
+            </section>
 
-			<section id="categorias">
-				<section id="formulario">
-					<h2 class="titulo-contacto">Envíenos un mensaje</h2>
-					<div id="form">
-						<form name="cotacto" method="POST" action="#">
-							<label for="nombre">Nombre:</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su nombre"><br>
-							<label for="apellido">Apellido:</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su apellido"><br>
-							<label for="dni">DNI</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su Documento Nacional de Identidad (sin puntos ni comas)"><br>
-							<hr>
-							<input type="submit" name="enviar" class="enviar">
-						</form>
+            <section id="categorias">
+                <section id="formulario">
+                    <h2 class="titulo-contacto">Envíenos un mensaje</h2>
+                    <div id="form">
+                        <!-- Nuevo formulario adaptado -->
+                        <form name="contacto" method="POST" action="/enviar">
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" name="nombre" placeholder="Ingrese su nombre" required><br><br>
 
-					</div>
-				</section>
-				
-			</section><!--/categorias-->
-			<hr>
-			<footer>
-				<p>
-					(c) Todos los derechos reservados - 2024 <br>
-					Diseñado por <a href="">Karen</a>
-				</p>
-			</footer>
+                            <label for="apellido">Apellido:</label><br>
+                            <input type="text" name="apellido" placeholder="Ingrese su apellido" required><br><br>
 
-			
-		</div>
+                            <label for="dni">DNI:</label><br>
+                            <input type="text" name="dni" placeholder="Ingrese su Documento Nacional de Identidad (sin puntos ni comas)" required><br><br>
 
-	</body>
+                            <input type="submit" value="Enviar">
+                        </form>
+                    </div>
+                </section>
+            </section><!--/categorias-->
+
+            <hr>
+            <footer>
+                <p>
+                    (c) Todos los derechos reservados - 2024 <br>
+                    Diseñado por <a href="">Karen</a>
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>

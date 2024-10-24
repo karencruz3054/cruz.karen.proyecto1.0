@@ -1,70 +1,55 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="static/style.css">
-	</head>
-	<body>
-		<div id="principal">
-			<header>
-				<div id="logo">
-					<h2 class="titulo">Cursos</h2>
-					<p class="sub-titulo">Inicia un Curso</p>
-				</div>
+    <head>
+        <title>Inicio de Sesión - Cursos</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+    <body>
+        <div id="principal">
+            <header>
+                <div id="logo">
+                    <h2 class="titulo">Cursos</h2>
+                    <p class="sub-titulo">inicio de sesion</p>
+                </div>
 
-				<nav class="menu">
-					<ul>
-						<li><a href="/">Inicio</a></li>
-						<li><a href="/Profesores">Profesores</a></li>
-						<li><a href="/Alumnos">Alumnos</a></li>
-						<li><a href="/Cursos">Cursos</a></li>
-					</ul>
-				</nav>
-			</header>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/Profesores">Profesores</a></li>
+                        <li><a href="/Alumnos">Alumnos</a></li>
+                        <li><a href="/Cursos">Cursos</a></li>
+                    </ul>
+                </nav>
+            </header>
+<section id="slide">
+	<img src="{{ url_for('static', filename='img/slide.jpg') }}" width="900" height="250">
+</section>
+<section id="categorias">
+    <section id="formulario">
+        <h2 class="titulo-contacto">Inscríbete a un Curso</h2>
+        <div id="form">
+            <form name="inscripcion" method="POST" action="/inscribirse">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre" required><br><br>
 
-			<section id="slide">
-				<img src="static/img/slide.jpg" width="900" height="250">
-			</section>
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" name="apellido" placeholder="Ingrese su apellido" required><br><br>
 
-			<section id="categorias">
-				<section id="formulario">
-					<h2 class="titulo-contacto">Inscribete a un Curso</h2>
-					<div id="form">
-						<form name="cotacto" method="POST" action="#">
-							<label for="nombre">Nombre:</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su nombre"><br>
-							<label for="apellido">Apellido:</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su apellido"><br>
-							<label for="dni">DNI</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su Documento Nacional de Identidad (sin puntos ni comas)"><br>
-							<label for="dni">E-Mail</label><br>
-							<input type="text" name="asunto" placeholder="Ingrese su E-Mail"><br>
-							<label for="cursos">Elije un Curso:</label><br>
-							<select name="cursos" id="cursos">
-    						<option value="Python">Python</option>
-  							<option value="C">C, C++, C# </option>
-  							<option value="Java">Java</option>
-							</select>
-							<hr>
-							<input type="submit" name="enviar" class="enviar">
+                <label for="dni">DNI:</label><br>
+                <input type="text" name="dni" placeholder="Ingrese su Documento Nacional de Identidad (sin puntos ni comas)" required><br><br>
 
-						</form>
+                <label for="email">E-Mail:</label><br>
+                <input type="email" name="email" placeholder="Ingrese su E-Mail" required><br><br>
 
-					</div>
-				</section>
-				
-			</section><!--/categorias-->
+                <label for="cursos">Elije un Curso:</label><br>
+                <select name="cursos" id="cursos">
+                    <option value="Python">Python</option>
+                    <option value="C">C, C++, C#</option>
+                    <option value="Java">Java</option>
+                </select><br><br>
 
-			<hr>
-			<footer>
-				<p>
-					(c) Todos los derechos reservados - 2024 <br>
-					Diseñado por <a href="">Karen</a>
-				</p>
-			</footer>
-
-			
-		</div>
-
-	</body>
-</html>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+</section>
